@@ -1,0 +1,562 @@
+/*
+ d888b  d88888b d8b   db d88888b d8888b. d888888b  .d88b.  db    db d88888b 
+88' Y8b 88'     888o  88 88'     88  `8D   `88'   .8P  Y8. 88    88 88'     
+88      88ooooo 88V8o 88 88ooooo 88oobY'    88    88    88 88    88 88ooooo 
+88  ooo 88~~~~~ 88 V8o88 88~~~~~ 88`8b      88    88    88 88    88 88~~~~~ 
+88. ~8~ 88.     88  V888 88.     88 `88.   .88.   `8P  d8' 88b  d88 88.     
+ Y888P  Y88888P VP   V8P Y88888P 88   YD Y888888P  `Y88'Y8 ~Y8888P' Y88888P
+*/
+:root
+{
+	--couleur1:rgba(255,255,255,1);
+	--grisClair:rgba(245, 245, 245,1);
+	--grisClairt:rgba(215, 215, 215,1);
+	--grisFonce:rgba(120, 120, 120,1);
+	--couleur3:rgba(14, 190, 255,1);
+	--couleur0:rgba(72,72,72,1);
+	--couleur0_light:rgba(72,72,72,0.3);
+	--couleurBleu:rgba(92,173,211,1);
+	--couleurBleuF:rgba(49,139,180,1);
+	--fontRobotoBold:font-family: 'Roboto-Bold';
+}
+.color1 {
+	color: var(--couleur1);	
+}
+.color3 {
+	color: var(--couleurBleu);	
+}
+.color3F {
+	color: var(--couleurBleuF);	
+}
+.back1 {
+	background-color: var(--grisClair);	
+}
+.back1t {
+	background-color: var(--grisClairt);	
+}
+.backB {
+	background-color: var(--couleurBleu);	
+}
+@font-face {
+    font-family: 'robotobold';
+   src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+        url('../fonts/roboto-bold-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, p, .input {
+	font-family: 'robotoregular'!important;
+}
+h1, h2, h3, h4, h5, .submit {
+	font-family: 'robotobold'!important;
+}
+.emphase {
+	font-size: 75%;
+	color: var(--grisFonce);
+}
+ a, a:hover {
+ 	color: var(--grisFonce);
+ 	text-decoration: none;
+ }
+
+
+.DR {
+	display: flex;
+	flex-direction: row;
+}
+.DC {
+	display: flex;
+	flex-direction: column;
+}
+.SA {
+	justify-content: space-around;
+}
+.SB {
+	justify-content: space-between;
+}
+.C {
+	justify-content: center;
+}
+.FE {
+	justify-content: flex-end;
+}
+.FS {
+	justify-content: flex-start;
+}
+.FW {
+	flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+	.colR1 {
+		width: calc((100% / 12)  * 1);
+	}
+	.colR2 {
+		width: calc((100% / 12)  * 2);
+	}
+	.colR3 {
+		width: calc((100% / 12)  * 3);
+	}
+	.colR4 {
+		width: calc((100% / 12)  * 4);
+	}
+	.colR5 {
+		width: calc((100% / 12)  * 5);
+	}
+	.colR6 {
+		width: calc((100% / 12)  * 6);
+	}
+	.colR7 {
+		width: calc((100% / 12)  * 7);
+	}
+	.colR8 {
+		width: calc((100% / 12)  * 8);
+	}
+	.colR9 {
+		width: calc((100% / 12)  * 9);
+	}
+	.colR10 {
+		width: calc((100% / 12)  * 10);
+	}
+	.colR11 {
+		width: calc((100% / 12)  * 11);
+	}
+	.colR12 {
+		width: calc((100% / 12)  * 12);
+	}
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	.colS1 {
+		width: calc((100% / 12)  * 1);
+	}
+	.colS2 {
+		width: calc((100% / 12)  * 2);
+	}
+	.colS3 {
+		width: calc((100% / 12)  * 3);
+	}
+	.colS4 {
+		width: calc((100% / 12)  * 4);
+	}
+	.colS5 {
+		width: calc((100% / 12)  * 5);
+	}
+	.colS6 {
+		width: calc((100% / 12)  * 6);
+	}
+	.colS7 {
+		width: calc((100% / 12)  * 7);
+	}
+	.colS8 {
+		width: calc((100% / 12)  * 8);
+	}
+	.colS9 {
+		width: calc((100% / 12)  * 9);
+	}
+	.colS10 {
+		width: calc((100% / 12)  * 10);
+	}
+	.colS11 {
+		width: calc((100% / 12)  * 11);
+	}
+	.colS12 {
+		width: calc((100% / 12)  * 12);
+	}
+	.hiddenS {
+		display: none;
+	}
+}
+
+.line {
+	padding-left: 15px;
+	padding-right: 15px;
+	width: auto;
+}
+.line img {
+	max-width: 100%;
+}
+.marginAuto {
+ 	margin: auto;
+ }
+ .margin1 {
+ 	margin: 1%;
+ }
+ .margin0 {
+ 	margin: 0;
+ }
+ .marginIcon {
+ 	margin-right: 15px;
+ }
+ .marginBottom1 {
+ 	margin-bottom: 1%;
+ }
+ .marginTop1 {
+ 	margin-top: 1%;
+ }
+ .marginTop3 {
+ 	margin-top: 3%;
+ }
+ .marginBTauto {
+ 	margin-bottom: auto;
+ 	margin-top: auto;
+ }
+ .padding1 {
+ 	padding: 3%;
+ }
+ .paddingL0 {
+ 	padding-left: 0;
+ 	padding-right: 15px;
+ }
+ .paddingR0 {
+ 	padding-right: 0;
+ 	padding-left: 15px;
+ }
+ .paddingBottom2 {
+ 	padding-bottom: 2%;
+ }
+ .paddingLeft80 {
+ 	padding-left: 70%;
+ }
+
+ .TC {
+ 	text-align: center;
+ }
+ .TR {
+ 	text-align: right;
+ }
+ .TL {
+ 	text-align: left;
+ }
+
+ header, section, footer {
+ 	max-width: 1600px;
+ 	margin-right: auto;
+ 	margin-left: auto;
+ }
+ p {
+ 	margin: 0;
+ }
+ h3, h4, h5 {
+ 	margin-top: 3px;
+ 	margin-bottom: 3px;
+ }
+ li {
+ 	list-style-type: none;
+ }
+
+
+
+
+.whiteRingMain {
+	font-size: 25px;
+}
+.blueEyeMain {
+	font-size: 20px;
+	position: relative;	
+	left: -22.5px;
+	top: 2.5px;
+}
+/*
+db   db d88888b  .d8b.  d8888b. d88888b d8888b. 
+88   88 88'     d8' `8b 88  `8D 88'     88  `8D 
+88ooo88 88ooooo 88ooo88 88   88 88ooooo 88oobY' 
+88~~~88 88~~~~~ 88~~~88 88   88 88~~~~~ 88`8b   
+88   88 88.     88   88 88  .8D 88.     88 `88. 
+YP   YP Y88888P YP   YP Y8888D' Y88888P 88   YD
+*/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--couleur1);
+	border-bottom:1px solid var(--couleur0_light);
+	z-index: 1;
+}
+header ol {
+	height: 110px;
+	padding: 0;
+	margin: 0;
+}
+nav li { 	
+	padding: 2% 4% 2% 4%;
+	border-top: 3px solid white;
+}
+nav li:hover {
+	border-top: 3px solid var(--couleurBleu);
+}
+.widthHeader {
+	width: 80%;
+	height: 110px;
+}
+.marginHeader {
+	margin-top: 110px;
+}
+
+/*
+.d8888. db      d888888b d8888b. d88888b d8888b. 
+88'  YP 88        `88'   88  `8D 88'     88  `8D 
+`8bo.   88         88    88   88 88ooooo 88oobY' 
+  `Y8b. 88         88    88   88 88~~~~~ 88`8b   
+db   8D 88booo.   .88.   88  .8D 88.     88 `88. 
+`8888Y' Y88888P Y888888P Y8888D' Y88888P 88   YD
+*/
+.sliderVignette {
+	max-height: 550px;
+	width: auto;
+}
+.vignette1 {
+	background: url("../images/slider/bg1.jpg") center no-repeat;
+	background-size: auto;
+}
+.vignette2 {
+	background: url("../images/slider/bg2.jpg") center no-repeat;
+	background-size: auto;
+}
+.legend {
+	position: absolute;
+	top: 200px;
+	left: 100px;
+}
+.arrondisFlecheL {
+	background: url("../images/circleGL.png") center no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;	
+	height: 50px;
+	font-size: 1.2em;
+}
+.arrondisFlecheR {
+	background: url("../images/circleGR.png") center no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;	
+	height: 50px;
+	font-size: 1.2em;
+}
+.w3-content{max-width:100%;min-width:100%;margin:auto}.w3-rest{overflow:hidden}
+.w3-tooltip,.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
+.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3-btn,.w3-button {
+	border:none;
+	display:inline-block;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	background-color: transparent;
+	white-space:nowrap
+}
+.w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+.w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;padding:8px 16px}
+.w3-bar .w3-button{white-space:normal}
+.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+
+/*
+.d8888. d88888b d8888b. db    db d888888b  .o88b. d88888b 
+88'  YP 88'     88  `8D 88    88   `88'   d8P  Y8 88'     
+`8bo.   88ooooo 88oobY' Y8    8P    88    8P      88ooooo 
+  `Y8b. 88~~~~~ 88`8b   `8b  d8'    88    8b      88~~~~~ 
+db   8D 88.     88 `88.  `8bd8'    .88.   Y8b  d8 88.     
+`8888Y' Y88888P 88   YD    YP    Y888888P  `Y88P' Y88888P 
+*/
+
+.mainFeature {
+	background: url("../images/main-feature.png") center no-repeat;
+	background-size: contain;
+}
+.icoContainer {
+	width: 50px;
+	height: 50px;
+}
+.grayRing {
+	font-size: 50px;
+	color: var(--grisFonce);
+}
+.whiteRingService {
+	font-size: 45px;
+	position: relative;	
+	left: -47.5px;
+	top: 2.5px;
+}
+.icon {
+	font-size: 20px;
+	position: relative;	
+	left: -80px;
+	top: 13.5px;
+}
+.blueCircleS {
+	font-size: 10px;
+	position: relative;	
+	left: -72px;
+	top: 18px;
+}
+
+/*
+d8888b. d8888b.  .d88b.     d88b d88888b d888888b 
+88  `8D 88  `8D .8P  Y8.    `8P' 88'     `~~88~~' 
+88oodD' 88oobY' 88    88     88  88ooooo    88    
+88~~~   88`8b   88    88     88  88~~~~~    88    
+88      88 `88. `8b  d8' db. 88  88.        88    
+88      88   YD  `Y88P'  Y8888P  Y88888P    YP   
+*/
+
+.ul {
+	background-color: var(--grisClairt);
+	padding: 0;
+	margin: 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.ul .li {
+	padding: 3.5% 0 3.5% 0;
+	margin: 0;	
+	text-align: center;
+}
+.ul .li i {
+	padding: 0;
+	margin: 0;	
+}
+.imgPortfolio1 {
+	background: url("../images/portfolio/01.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio2 {
+	background: url("../images/portfolio/02.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio3 {
+	background: url("../images/portfolio/03.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio4 {
+	background: url("../images/portfolio/04.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio5 {
+	background: url("../images/portfolio/05.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio6 {
+	background: url("../images/portfolio/06.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio7 {
+	background: url("../images/portfolio/07.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+.imgPortfolio8 {
+	background: url("../images/portfolio/08.jpg") center no-repeat;
+	background-size: contain;
+	min-height: 150px;
+}
+#banniere_description {  	
+    height: 67.5px;   
+    max-width: 225px;
+    background-color: rgba(24,24,24,0.6);
+    color: white;    
+    margin: 82.5px auto 0 auto;
+}
+
+#banniere_description h5 {  
+	font-size: 15px;
+	padding-left: 10px;
+	position: relative;
+	top: -12.5px;
+}
+#banniere_description p {  
+	padding-bottom: 10px;
+	font-size: 10px;
+	padding-left: 10px;
+	position: relative;
+	top: -12.5px;
+}
+#banniere_description .blueEyeContainer {  	
+	position: relative;
+	top: -12.5px;
+	left: 80%;
+}
+.whiteRing {
+	font-size: 25px;
+}
+.blueEye {
+	font-size: 20px;
+	position: relative;	
+	left: -26.5px;
+	top: -1.7px;
+}
+.blueEyeWhiteIco {
+	font-size: 8px;
+	position: relative;	
+	left: -45px;
+	top: -5px;
+}
+.arrow {
+	position: relative;
+	top: -30px;
+	font-size: 1.3em;
+}
+.arrowUL {
+	padding-left: 0;
+}
+.active {
+	border-bottom: 3px solid var(--couleurBleuF);
+	margin: 0;	
+	background-color: var(--couleurBleu);
+	color: var(--couleur1);
+}
+/*
+ .o88b.  .d88b.  d8b   db d888888b  .d8b.   .o88b. d888888b 
+d8P  Y8 .8P  Y8. 888o  88 `~~88~~' d8' `8b d8P  Y8 `~~88~~' 
+8P      88    88 88V8o 88    88    88ooo88 8P         88    
+8b      88    88 88 V8o88    88    88~~~88 8b         88    
+Y8b  d8 `8b  d8' 88  V888    88    88   88 Y8b  d8    88    
+ `Y88P'  `Y88P'  VP   V8P    YP    YP   YP  `Y88P'    YP  
+ */
+
+.map {
+	background: url("../images/map.jpg") center no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;	
+	height: 500px;
+}
+.submit {
+	background-color: var(--couleurBleu);
+	color: white;	
+	box-shadow: none;
+	outline: none;
+	border-top:2px solid var(--couleurBleu);
+	border-right:2px solid var(--couleurBleu);
+	border-bottom:2px solid var(--couleurBleuF);
+	border-left:2px solid var(--couleurBleu);
+	border-radius: 3px;
+	padding: 1%;
+}
+.input {
+	border-radius: 3px;
+	margin: 1%;
+	padding: 2%;
+	box-shadow: none;
+	outline: none;
+	border:1px solid var(--grisFonce);
+}
